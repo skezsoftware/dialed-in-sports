@@ -14,3 +14,91 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+/* Base font settings */
+:root {
+  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+/* Apply to all text */
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Apply to all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Specific heading adjustments */
+h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+/* Body text refinements */
+p {
+  font-weight: 400;
+}
+
+/* Navigation and buttons */
+.cta-button, 
+nav a {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Stats and features */
+.stat__card h3 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.feature h3 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Optional: Add some refinements to specific components */
+.hero__content h1 {
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.value-card h3 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Small text refinements */
+.small-text {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Optional: Add some responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    letter-spacing: 0.5px;
+  }
+  
+  .hero__content h1 {
+    letter-spacing: 1px;
+  }
+}
