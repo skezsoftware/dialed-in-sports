@@ -246,6 +246,7 @@ section h2:after {
 .sports-coverage__container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .sports-coverage h2 {
@@ -257,7 +258,7 @@ section h2:after {
 
 .sports-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 1rem;
 }
@@ -285,19 +286,19 @@ section h2:after {
 
 /* Sport-specific background images */
 .college-football {
-  background-image: url('/images/college-football.jpg');
+  background-image: url('../../assets/college-football.jpg');
 }
 
 .nfl {
-  background-image: url('/images/nfl.jpg');
+  background-image: url('../../assets/nfl.jpg');
 }
 
 .college-basketball {
-  background-image: url('/images/college-basketball.jpg');
+  background-image: url('../../assets/college-basketball.jpg');
 }
 
 .college-baseball {
-  background-image: url('/images/college-baseball.jpg');
+  background-image: url('../../assets/college-baseball.jpg');
 }
 
 .sport-content {
@@ -322,6 +323,13 @@ section h2:after {
 }
 
 /* Update responsive design */
+@media (max-width: 991px) {
+  .sports-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .sports-grid {
     grid-template-columns: 1fr;
@@ -329,5 +337,272 @@ section h2:after {
   
   .sport-image {
     height: 200px;
+  }
+}
+
+/* After the hero section styles */
+.company-name {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: var(--font-heading);
+    position: relative;
+    display: inline-block;
+}
+
+.company-name::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* Adjust the existing hero content styles */
+.hero__content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Add to your responsive section */
+@media (max-width: 768px) {
+    .company-name {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    .company-name::after {
+        height: 3px;
+        bottom: -8px;
+    }
+}
+
+/* Discord Access Section */
+.discord-access {
+  background-color: #f8f9fa;
+  padding: 5rem 0;
+}
+
+.discord-access__container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.pricing-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.discord-icon {
+  font-size: 4rem;
+  color: #5865F2;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 3rem;
+  color: #2fc193;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.price span {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.join-button {
+  background: #5865F2;
+  color: white;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+}
+
+/* Process Section */
+.process {
+  padding: 5rem 0;
+}
+
+.process__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: #5998ea;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-weight: bold;
+}
+
+/* FAQ Section */
+.faq {
+  background-color: #f8f9fa;
+  padding: 5rem 0;
+}
+
+.faq__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.faq-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+  color: #5998ea;
+  margin-bottom: 1rem;
+}
+
+/* Updated Disclaimer Section */
+.disclaimer {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.disclaimer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.disclaimer__main {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.disclaimer__main p {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.disclaimer__legal h4 {
+  color: #5998ea;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.disclaimer__legal p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.legal-states {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.legal-states ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.legal-states li {
+  color: #333;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.disclaimer__note {
+  color: #666;
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .legal-states {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .legal-states ul {
+    text-align: center;
+  }
+  
+  .disclaimer {
+    padding: 2rem 0;
   }
 }

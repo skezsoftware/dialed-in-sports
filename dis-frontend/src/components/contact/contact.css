@@ -1,0 +1,166 @@
+.contact {
+    padding: 6rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.contact__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact__header h1 {
+    color: #5998ea;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact__header p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact__subheader {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact__subheader p {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.contact__subheader ul {
+    list-style: none;
+    padding: 0;
+    color: #666;
+}
+
+.contact__subheader li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.contact__container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form__header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form__header h2 {
+    color: #2fc193;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.form__header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Form Styles */
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form__group label {
+    color: #333;
+    font-weight: 500;
+}
+
+.form__group input,
+.form__group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+    outline: none;
+    border-color: #5998ea;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #5998ea, #2fc193);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Status Messages */
+.submit-status {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.submit-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.submit-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        padding: 4rem 1rem;
+    }
+
+    .contact__header h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact__container {
+        padding: 2rem;
+    }
+
+    .form__header h2 {
+        font-size: 1.8rem;
+    }
+}
