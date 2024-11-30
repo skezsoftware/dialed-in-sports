@@ -23,8 +23,13 @@ section {
 }
 
 .hero__content h1 {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .hero__content p {
@@ -189,6 +194,13 @@ section h2:after {
 .cta h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.cta h2:after {
+  display: none;
 }
 
 .cta p {
@@ -342,48 +354,47 @@ section h2:after {
 
 /* After the hero section styles */
 .company-name {
-    font-size: 4.5rem;
-    font-weight: 800;
-    color: #fff;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    font-family: var(--font-heading);
-    position: relative;
-    display: inline-block;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-heading);
+  position: relative;
+  display: block;
+  margin-bottom: 1.5rem;
 }
 
 .company-name::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 4px;
-    background: #fff;
-    border-radius: 2px;
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 4px;
+  background: #fff;
+  border-radius: 2px;
 }
 
-/* Adjust the existing hero content styles */
-.hero__content h1 {
-    font-size: 2.8rem;
-    margin-bottom: 1.5rem;
-    margin-top: 1rem;
-}
-
-/* Add to your responsive section */
+/* Adjust responsive styles */
 @media (max-width: 768px) {
-    .company-name {
-        font-size: 3rem;
-        letter-spacing: 2px;
-    }
+  .hero__content h1 {
+    font-size: 2rem;
+    gap: 0.5rem;
+  }
 
-    .company-name::after {
-        height: 3px;
-        bottom: -8px;
-    }
+  .company-name {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .company-name::after {
+    height: 3px;
+    bottom: -8px;
+  }
 }
 
 /* Discord Access Section */
