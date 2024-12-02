@@ -19,7 +19,18 @@ function PageTracker() {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname });
+    // Send more specific page titles
+    const pageTitles = {
+      '/': 'Dialed In Sports - Expert Sports Betting Analytics & Predictions',
+      '/about': 'About Dialed In Sports - Premium Sports Betting Analytics Service',
+      '/contact': 'Contact Dialed In Sports - Join Our Premium Service'
+    };
+
+    ReactGA.send({ 
+      hitType: "pageview", 
+      page: location.pathname,
+      title: pageTitles[location.pathname] || 'Dialed In Sports' // fallback title
+    });
   }, [location]);
 
   return null;
