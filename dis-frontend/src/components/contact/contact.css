@@ -105,6 +105,26 @@
     border-color: #5998ea;
 }
 
+.form__group select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: white;
+    cursor: pointer;
+}
+
+.form__group select:focus {
+    outline: none;
+    border-color: #5998ea;
+}
+
+.form__group textarea::placeholder {
+    color: #666;
+    font-size: 0.9rem;
+}
+
 .submit-btn {
     background: linear-gradient(135deg, #5998ea, #2fc193);
     color: white;

@@ -13,10 +13,10 @@ const Form = () => {
     setSubmitStatus('');
 
     emailjs.sendForm(
-      'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       form.current,
-      'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
       .then((result) => {
         setSubmitStatus('success');
@@ -29,6 +29,17 @@ const Form = () => {
         setIsSubmitting(false);
       });
   }
+
+  const states = [
+    "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", 
+    "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", 
+    "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", 
+    "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", 
+    "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", 
+    "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", 
+    "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", 
+    "Wisconsin", "Wyoming"
+  ];
 
   return (
     <form className="contact__form" ref={form} onSubmit={handleSubmit}>
@@ -53,13 +64,17 @@ const Form = () => {
       </div>
 
       <div className="form__group">
-        <label htmlFor="subject">Subject</label>
-        <input
-          type="text"
-          id="subject"
-          name="subject"
+        <label htmlFor="state">State</label>
+        <select
+          id="state"
+          name="user_state"
           required
-        />
+        >
+          <option value="">Select your state</option>
+          {states.map((state) => (
+            <option key={state} value={state}>{state}</option>
+          ))}
+        </select>
       </div>
 
       <div className="form__group">
@@ -69,6 +84,7 @@ const Form = () => {
           name="message"
           required
           rows="5"
+          placeholder="Let us know you're interested in our service and we'll get back to you with membership details!"
         ></textarea>
       </div>
 
