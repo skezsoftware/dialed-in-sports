@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Analytics } from "@vercel/analytics/react"
 import Home from './components/home/Home'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
@@ -37,6 +38,7 @@ const AppContent = () => {
       </Routes>
       <UpButton />
       <Footer />
+      <Analytics />
     </>
   );
 };
