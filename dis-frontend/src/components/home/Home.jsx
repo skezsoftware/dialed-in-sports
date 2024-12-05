@@ -22,14 +22,14 @@ const Home = () => {
         <meta property="og:title" content="Dialed In Sports - Expert Sports Betting Analytics" />
         <meta property="og:description" content="Expert sports betting analytics and predictions for College Football, NFL, College Basketball, and College Baseball." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dialedinsports.com" />
+        <meta property="og:url" content="https://dialed-in-sports.vercel.app/" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Dialed In Sports - Premium Sports Analytics" />
         <meta name="twitter:description" content="Expert sports betting picks and analysis for major college sports and NFL." />
         
-        <link rel="canonical" href="https://dialedinsports.com" />
+        <link rel="canonical" href="https://dialed-in-sports.vercel.app/" />
       </Helmet>
 
       <div className="home">

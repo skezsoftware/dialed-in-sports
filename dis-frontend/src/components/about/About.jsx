@@ -10,7 +10,7 @@ const About = () => {
         <title>About Dialed In Sports - Premium Sports Betting Analytics Service</title>
         <meta name="description" content="Learn about Dialed In Sports' premium betting analytics service. Expert insights for College Football, NFL, College Basketball, and College Baseball betting." />
         <meta name="keywords" content="sports betting analytics, college football picks, NFL betting, college basketball predictions, sports handicapping, betting expertise" />
-        <link rel="canonical" href="https://dialedinsports.com/about" />
+        <link rel="canonical" href="https://dialed-in-sports.vercel.app/about"/>
       </Helmet>
 
       <main className="about">

@@ -10,7 +10,7 @@ const Contact = () => {
         <title>Contact Dialed In Sports - Join Our Premium Service</title>
         <meta name="description" content="Get in touch to join our premium sports betting analytics Discord service. Expert picks and analysis for College Football, NFL, College Basketball, and College Baseball." />
         <meta name="keywords" content="sports betting discord, premium betting picks, sports analytics contact, join betting service" />
-        <link rel="canonical" href="https://dialedinsports.com/contact" />
+        <link rel="canonical" href="https://dialed-in-sports.vercel.app/contact"/>
       </Helmet>
       <div className="contact">
         <div className="contact__header">
