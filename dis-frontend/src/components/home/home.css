@@ -639,14 +639,22 @@ section h2:after {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .legal-states {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    padding: 0 1rem;
   }
 
   .legal-states ul {
-    text-align: center;
+    margin: 0;
+    padding: 0;
   }
-  
+
+  .legal-states li {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
   .disclaimer {
     padding: 2rem 0;
   }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import './about.css'
 import { FaFootballBall, FaBasketballBall, FaBaseballBall, FaChartLine, FaCalculator, FaPiggyBank } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -96,6 +97,9 @@ const About = () => {
                   <li>Comprehensive betting strategies</li>
                   <li>Professional customer support</li>
                 </ul>
+                <Link to="/contact" className="expertise__cta">
+                  Get Started Today
+                </Link>
               </div>
             </section>
           </div>

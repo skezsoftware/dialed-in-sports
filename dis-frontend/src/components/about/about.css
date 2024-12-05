@@ -218,6 +218,26 @@
   margin-bottom: 1rem;
 }
 
+.expertise__cta {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(45deg, #5998ea, #2fc193);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.expertise__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(89, 152, 234, 0.4);
+  color: white;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .sports__grid,
@@ -267,5 +287,11 @@
   .about h1::after {
     width: 150px;
     height: 3px;
+  }
+  
+  .expertise__cta {
+    width: 100%;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
   }
 }

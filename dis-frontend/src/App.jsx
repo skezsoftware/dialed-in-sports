@@ -10,6 +10,8 @@ import About from './components/about/About'
 import Contact from './components/contact/Contact'
 import UpButton from './components/up_button/UpButton'
 import { HelmetProvider } from 'react-helmet-async';
+import ScrollToTop from './components/ScrollToTop';
+import SuccessPage from './components/contact/SuccessPage';
 
 // Page tracking function
 const usePageTracking = () => {
@@ -29,11 +31,13 @@ const AppContent = () => {
   usePageTracking();
   return (
     <>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/success" element={<SuccessPage />} />
         <Route path="*" element={<h1>404 Page Not Found</h1>} />
       </Routes>
       <UpButton />

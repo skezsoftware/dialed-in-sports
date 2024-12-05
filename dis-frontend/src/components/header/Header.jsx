@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './header.css';
@@ -7,8 +7,23 @@ import logo from '../../assets/dialed-logo.png';
 const Header = () => {
   const [expanded, setExpanded] = useState(false);
 
+  useEffect(() => {
+    const closeMenu = (e) => {
+      if (expanded) {
+        const navbar = document.querySelector('.navbar-custom');
+        if (navbar && !navbar.contains(e.target)) {
+          setExpanded(false);
+        }
+      }
+    };
+
+    document.addEventListener('click', closeMenu);
+
+    return () => document.removeEventListener('click', closeMenu);
+  }, [expanded]);
+
   const handleNavClick = () => {
-    setExpanded(false);  // Close the menu when a link is clicked
+    setExpanded(false);
   };
 
   return (

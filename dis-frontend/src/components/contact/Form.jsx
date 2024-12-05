@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './contact.css'
 
 const Form = () => {
   const form = useRef();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
 
@@ -21,6 +23,9 @@ const Form = () => {
       .then((result) => {
         setSubmitStatus('success');
         form.current.reset();
+        setTimeout(() => {
+          navigate('/success');
+        }, 1000);
       }, (error) => {
         setSubmitStatus('error');
         console.log(error.text);

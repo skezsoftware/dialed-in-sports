@@ -2,8 +2,23 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import './contact.css'
 import Form from './Form'
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
+  const navigate = useNavigate();
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // ... your existing email submission logic ...
+      
+      // After successful submission
+      navigate('/success');
+    } catch (error) {
+      // ... your error handling ...
+    }
+  };
+  
   return (
     <>
       <Helmet>
@@ -31,7 +46,7 @@ const Contact = () => {
             <h2>Get Started Today</h2>
             <p>Fill out the form below and we'll reach out with everything you need to join</p>
           </div>
-          <Form />
+          <Form handleSubmit={handleSubmit} />
         </div>
       </div>
     </>
