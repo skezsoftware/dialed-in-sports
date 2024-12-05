@@ -9,7 +9,7 @@ const SuccessPage = () => {
         <div className="success-icon">✓</div>
         <h1>Submission Successful!</h1>
         <p>Thank you for your interest in Dialed In Sports.</p>
-        <p>Please check your email for a confirmation message with next steps.</p>
+        <p>Please check your email for a confirmation message with next steps. Check your spam folder if you do not see it.</p>
         <Link to="/" className="home-button">
           Return to Home
         </Link>

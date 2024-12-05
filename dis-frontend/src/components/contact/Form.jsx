@@ -49,7 +49,7 @@ const Form = () => {
   return (
     <form className="contact__form" ref={form} onSubmit={handleSubmit}>
       <div className="form__group">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Full Name</label>
         <input
           type="text"
           id="name"
