@@ -14,6 +14,7 @@ const Form = () => {
     setIsSubmitting(true);
     setSubmitStatus('');
 
+    // First email (to you)
     emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -21,12 +22,25 @@ const Form = () => {
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
       .then((result) => {
+        // Auto-reply email (to user)
+        return emailjs.send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID,
+          {
+            user_name: form.current.user_name.value,
+            user_email: form.current.user_email.value
+          },
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        );
+      })
+      .then(() => {
         setSubmitStatus('success');
         form.current.reset();
         setTimeout(() => {
           navigate('/success');
         }, 1000);
-      }, (error) => {
+      })
+      .catch((error) => {
         setSubmitStatus('error');
         console.log(error.text);
       })
