@@ -22,7 +22,7 @@ const Home = () => {
         <meta property="og:title" content="Dialed In Sports - Expert Sports Betting Analytics" />
         <meta property="og:description" content="Expert sports betting analytics and predictions for College Football, NFL, College Basketball, and College Baseball." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dialed-in-sports.vercel.app/" />
+        <meta property="og:url" content="https://www.dialedinsports.vip/" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary" />
